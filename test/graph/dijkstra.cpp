@@ -5,7 +5,7 @@ struct edge {
 	int from, to;
 	ll cost;
 };
-#include <graph/bellmannFord.cpp>
+#include <graph/bellmanFord.cpp>
 
 void stress_test(int LIM) {
 	ll queries = 0;
@@ -26,7 +26,7 @@ void stress_test(int LIM) {
 
 		for (int i = 0; i < n; i++) {
 			auto got = dijkstra(adj, i);
-			auto expected = bellmannFord(n, edges, i);
+			auto expected = bellmanFord(n, edges, i);
 			
 			if (got != expected) cerr << "error" << FAIL;
 			queries += n;

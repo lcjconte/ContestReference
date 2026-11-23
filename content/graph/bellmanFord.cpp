@@ -1,4 +1,4 @@
-auto bellmannFord(int n, vector<edge>& edges, int start) {
+auto bellmanFord(int n, vector<edge>& edges, int start) {
 	vector<ll> dist(n, INF), prev(n, -1);
 	dist[start] = 0;
 

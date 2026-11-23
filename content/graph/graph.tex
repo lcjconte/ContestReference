@@ -126,9 +126,9 @@ Sei $d_{i\smash{j}}$ die Distanzmatrix von $G$, dann gibt $d_{i\smash{j}}^k$ die
 
 Sei $a_{ij}$ die Adjazenzmatrix von $G$ \textcolor{gray}{(mit $a_{ii} = 1$)}, dann gibt $a_{i\smash{j}}^k$ die Anzahl der Wege von $i$ nach $j$ mit Länge genau \textcolor{gray}{(maximal)} $k$ an mit der Verknüpfung: $c_{i\smash{j}} = a_{i\smash{j}} \otimes b_{i\smash{j}} = \sum a_{ik} \cdot b_{k\smash{j}}$
 
-\subsubsection{\textsc{Bellmann-Ford}-Algorithmus}
+\subsubsection{\textsc{Bellman-Ford}-Algorithmus}
 \method{bellmanFord}{kürzeste Pfade oder negative Kreise finden}{\abs{V}\*\abs{E}}
-\sourcecode{graph/bellmannFord.cpp}
+\sourcecode{graph/bellmanFord.cpp}
 
 \subsubsection{Algorithmus von \textsc{Dijkstra}}
 \method{dijkstra}{kürzeste Pfade in Graphen ohne negative Kanten}{\abs{E}\*\log(\abs{V})}

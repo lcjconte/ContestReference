@@ -4,7 +4,7 @@ struct edge {
 	int from, to;
 	ll cost;
 };
-#include <graph/bellmannFord.cpp>
+#include <graph/bellmanFord.cpp>
 namespace floydWarshall {
 #include <graph/floydWarshall.cpp>
 }
@@ -31,7 +31,7 @@ void stress_test(int LIM) {
 
 		floydWarshall::floydWarshall();
 		for (int i = 0; i < n; i++) {
-			auto got = bellmannFord(n, edges, i);
+			auto got = bellmanFord(n, edges, i);
 			auto expected = floydWarshall::dist[i];
 			
 			if (got != expected) cerr << "error" << FAIL;
@@ -56,7 +56,7 @@ void performance_test() {
 	});
 
 	t.start();
-	auto got = bellmannFord(N, edges, 0);
+	auto got = bellmanFord(N, edges, 0);
 	t.stop();
 	hash_t hash = 0;
 	for (auto x : got) hash += x;

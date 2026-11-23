@@ -128,7 +128,7 @@
 	\end{align*}
 	Löse Fluss auf $G'$ mit \textsc{Dinic's Algorithmus}, wenn alle Kanten von $s'$ saturiert sind ist der Fluss in $G$ gültig. $x$ beschränkt den Fluss in $G$ (Binary-Search für minflow, $\infty$ sonst).
 	\item \textbf{\textsc{Johnsons} Reweighting Algorithmus:}
-	Initialisiere alle Entfernungen mit \texttt{d[i] = 0}. Berechne mit \textsc{Bellmann-Ford} kürzeste Entfernungen.
+	Initialisiere alle Entfernungen mit \texttt{d[i] = 0}. Berechne mit \textsc{Bellman-Ford} kürzeste Entfernungen.
 	Falls es einen negativen Zyklus gibt abrrechen.
 	Sonst ändere die Gewichte von allen Kanten \texttt{(u,v)} im ursprünglichen Graphen zu \texttt{d[u]+w[u,v]-d[v]}.
 	Dann sind alle Kantengewichte nichtnegativ, \textsc{Dijkstra} kann angewendet werden.
@@ -137,7 +137,7 @@
 	Ändere alle Bedingungen in die Form $a-b \leq c$.
 	Für jede Bedingung füge eine Kante \texttt{(b,a)} mit Gewicht \texttt{c} ein.
 	Füge Quelle \texttt{s} hinzu, mit Kanten zu allen Knoten mit Gewicht 0.
-	Nutze \textsc{Bellmann-Ford}, um die kürzesten Pfade von \texttt{s} aus zu finden.
+	Nutze \textsc{Bellman-Ford}, um die kürzesten Pfade von \texttt{s} aus zu finden.
 	\texttt{d[v]} ist mögliche Lösung für \texttt{v}.
 
 	\item \textbf{Min-Weight-Vertex-Cover im Bipartiten Graph:}
