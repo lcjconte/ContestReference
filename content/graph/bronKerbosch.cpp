@@ -1,4 +1,4 @@
-using bits = bitset<64>;
+using bits = bitset<64>; // change bottom assignment if changed
 vector<bits> adj, cliques;
 
 void addEdge(int a, int b) {

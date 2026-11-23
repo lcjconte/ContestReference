@@ -76,4 +76,14 @@ struct Treap {
 		root = merge(left, right);
 	}
 	// for query use remove and read middle BEFORE remerging
+
+    // optional
+    void debug(int i) {
+        if (i == -1) return;
+        push(treap[i].l);
+        push(treap[i].r);
+        debug(treap[i].l);
+        cout << treap[i].val << " ";
+        debug(treap[i].r);
+    }
 };

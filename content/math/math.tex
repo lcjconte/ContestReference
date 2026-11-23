@@ -26,7 +26,7 @@
 	\end{methods}
 	\sourcecode{math/permIndex.cpp}
 \end{algorithm}
-\clearpage
+\vfill\null\columnbreak
 
 \subsection{Mod-Exponent und Multiplikation über $\boldsymbol{\mathbb{F}_p}$}
 %\vspace{-1.25em}
@@ -236,6 +236,13 @@ sich alle Lösungen von $x^2-ny^2=c$ berechnen durch:
 	\sourcecode{math/legendre.cpp}
 \end{algorithm}
 
+\begin{algorithm}{Naive Faktorisierung}
+	\begin{methods}
+		\method{factor}{berechnet Primfaktoren einer Zahl}{\sqrt(n)}
+	\end{methods}
+	\sourcecode{math/naiveFactor.cpp}
+\end{algorithm}
+
 \begin{algorithm}{Lineares Sieb und Multiplikative Funktionen}
 	Eine (zahlentheoretische) Funktion $f$ heißt multiplikativ wenn $f(1)=1$ und $f(a\cdot b)=f(a)\cdot f(b)$, falls $\ggT(a,b)=1$.
 	
@@ -250,12 +257,13 @@ sich alle Lösungen von $x^2-ny^2=c$ berechnen durch:
 	\textbf{Wichtig:} Sieb rechts ist schneller für \code{isPrime} oder \code{primes}!
 	
 	\sourcecode{math/linearSieve.cpp}
-	\textbf{\textsc{Möbius}-Funktion:}
-	\begin{itemize}
-		\item $\mu(n)=+1$, falls $n$ quadratfrei ist und gerade viele Primteiler hat
-		\item $\mu(n)=-1$, falls $n$ quadratfrei ist und ungerade viele Primteiler hat
-		\item $\mu(n)=0$, falls $n$ nicht quadratfrei ist
-	\end{itemize}
+
+	% \textbf{\textsc{Möbius}-Funktion:}
+	% \begin{itemize}
+	% 	\item $\mu(n)=+1$, falls $n$ quadratfrei ist und gerade viele Primteiler hat
+	% 	\item $\mu(n)=-1$, falls $n$ quadratfrei ist und ungerade viele Primteiler hat
+	% 	\item $\mu(n)=0$, falls $n$ nicht quadratfrei ist
+	% \end{itemize}
 
 	\textbf{\textsc{Euler}sche $\boldsymbol{\varphi}$-Funktion:}
 	\begin{itemize}
@@ -298,6 +306,7 @@ sich alle Lösungen von $x^2-ny^2=c$ berechnen durch:
 	Es gibt $2^{[x]}-1$ nicht leere Subsequences in $A$, die nur Vielfache von $x$ enthalten.
 	Die Anzahl der Subsequences mit $\ggT=1$ ist gegeben durch $\sum_{i = 1}^N \mu(i) \cdot (2^{cnt[i]} - 1)$.
 \end{algorithm}
+\vfill\null\columnbreak
 
 \subsection{LGS über $\boldsymbol{\mathbb{F}_p}$}
 \method{gauss}{löst LGS}{n^3}
@@ -342,7 +351,6 @@ sich alle Lösungen von $x^2-ny^2=c$ berechnen durch:
 \begin{algorithm}{Operations on Formal Power Series}
     \sourcecode{math/transforms/seriesOperations.cpp}
 \end{algorithm}
-
 \subsection{Kombinatorik}
 
 \paragraph{Wilsons Theorem}
@@ -377,7 +385,7 @@ so gilt
 	Die Anzahl der \mbox{$k$-elementigen} Teilmengen einer \mbox{$n$-elementigen} Menge.
 	
 	\input{math/tables/binom}
-	
+	\vfill\null\columnbreak
 	\begin{methods}
 		\method{precalc}{berechnet $n!$ und $n!^{-1}$ vor}{\mathit{lim}}
 		\method{calc\_binom}{berechnet Binomialkoeffizient}{1}
@@ -420,6 +428,8 @@ $1,~1,~2,~5,~14,~42,~132,~429,~1430,~4862,~16796,~58786,~208012,~742900$
 \begin{itemize}
 	\item Formel $1$ ohne Division in \runtime{n^2}, Formel $2$ und $3$ in \runtime{n}
 \end{itemize}
+
+\vfill\null\columnbreak
 
 \paragraph{\textsc{Catalan}-Convolution}
 \begin{itemize}
@@ -532,7 +542,7 @@ g\left(X\right) := \min\left\{
 \]
 $X$ ist genau dann gewonnen, wenn $g\left(X\right) > 0$ ist.\\
 Wenn man $k$ Spiele in den Zuständen $X_1, \ldots, X_k$ hat, dann ist die \textsc{Grundy}-Zahl des Gesamtzustandes $g\left(X_1\right) \oplus \ldots \oplus g\left(X_k\right)$.
-
+\vfill\null\columnbreak
 \subsection{Nim-Spiele}
 \begin{itemize}
 	\item[\ding{182}] letzter gewinnt (normal)
@@ -561,6 +571,8 @@ Wenn man $k$ Spiele in den Zuständen $X_1, \ldots, X_k$ hat, dann ist die \text
 
 \subsection{Reihen}
 \input{math/tables/series}
+
+\vfill\null\columnbreak
 
 \subsection{Wichtige Zahlen}
 \input{math/tables/composite}

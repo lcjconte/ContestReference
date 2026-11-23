@@ -21,3 +21,13 @@ std::decimal::decimal128
 constexpr ll INF = 0x3FFF'FFFF'FFFF'FFFFll;
 // 1e9 < INF < Max_Value / 2
 constexpr int INF = 0x3FFF'FFFF;
+
+// compile command
+alias myg++='g++ -x c++ -std=gnu++23 -Wall -O2 -static -pipe -g'
+
+// VSCode Settings
+Cpp Standard: c++23
+Format on Save: true
+Clang Format Fallback Style:
+"{ BasedOnStyle: Google, IndentWidth: 4, ColumnLimit: 0}"
+Autocomplete Add Parentheses: true

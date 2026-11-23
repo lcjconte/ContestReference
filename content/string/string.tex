@@ -15,6 +15,14 @@
 	\sourcecode{string/z.cpp}
 \end{algorithm}
 
+\begin{algorithm}{Prefixfunktion (KMP)}
+    \begin{methods}[ll]
+        $\pi_i\coloneqq$ Länge des längsten echten Präfixes von
+        $s_0\cdots s_i$, das zugleich Suffix ist & \runtime{n}
+    \end{methods}
+    \sourcecode{string/prefix.cpp}
+\end{algorithm}
+
 \begin{algorithm}{Rolling Hash}
 	\sourcecode{string/rollingHash.cpp}
 \end{algorithm}
@@ -61,7 +69,8 @@
 	\end{enumerate}
 	\sourcecode{string/ahoCorasick.cpp}
 \end{algorithm}
-\clearpage
+
+\vfill\null\columnbreak
 
 \begin{algorithm}{Lyndon und De-Bruijn}
 	\begin{itemize}

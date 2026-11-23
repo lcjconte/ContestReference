@@ -23,5 +23,4 @@ ll calc(int n, int m) {
 	for (int i = 1; i < m; i++) {
 		rec(i, 0, n - 1, 0, n - 1);
 	}
-	return dp[m - 1][n - 1];
-}
+	return dp[m - 1][n - 1];}

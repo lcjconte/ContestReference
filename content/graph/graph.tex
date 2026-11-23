@@ -37,6 +37,15 @@
 	\sourcecode{graph/LCA_sparse.cpp}
 \end{algorithm}
 
+\begin{algorithm}[optional]{Lowest Common Ancestor}
+	\begin{methods}
+		\method{init}{baut DFS-Baum über $g$ auf}{\abs{V}\*\log(\abs{V})}
+		\method{getLCA}{findet LCA}{1}
+		\method{getDepth}{berechnet Distanz zur Wurzel im DFS-Baum}{1}
+	\end{methods}
+	\sourcecode{graph/LCA_sparse.cpp}
+\end{algorithm}
+
 \begin{algorithm}{Centroids}
 	\begin{methods}
 		\method{find\_centroid}{findet alle Centroids des Baums (maximal 2)}{\abs{V}}
@@ -125,6 +134,8 @@ Sei $a_{ij}$ die Adjazenzmatrix von $G$ \textcolor{gray}{(mit $a_{ii} = 1$)}, da
 \method{dijkstra}{kürzeste Pfade in Graphen ohne negative Kanten}{\abs{E}\*\log(\abs{V})}
 \sourcecode{graph/dijkstra.cpp}
 
+\vfill\null\columnbreak
+
 \begin{algorithm}{Dynamic Connectivity}
 	\begin{methods}
 		\method{Constructor}{erzeugt Baum ($n$ Knoten, $m$ updates)}{n+m}
@@ -133,14 +144,6 @@ Sei $a_{ij}$ die Adjazenzmatrix von $G$ \textcolor{gray}{(mit $a_{ii} = 1$)}, da
 	\end{methods}
 	\sourcecode{graph/connect.cpp}
 \end{algorithm}
-
-
-
-
-
-
-
-
 
 \begin{algorithm}{Maximal Cliques}
 	\begin{methods}
@@ -159,7 +162,6 @@ Sei $a_{ij}$ die Adjazenzmatrix von $G$ \textcolor{gray}{(mit $a_{ii} = 1$)}, da
 		\item die ersten [0..l) Knoten in \code{adj} sind die linke Seite des Graphen
 	\end{itemize}
 	\sourcecode{graph/maxCarBiMatch.cpp}
-	\columnbreak
 	\begin{methods}
 		\method{hopcroft\_karp}{berechnet Matching}{\sqrt{\abs{V}}\*\abs{E}}
 	\end{methods}

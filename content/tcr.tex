@@ -6,7 +6,7 @@
 ]{scrartcl}
 
 % General information.
-\newcommand{\teamname}{Kindergarten Timelimit}
+\newcommand{\teamname}{KIT or Miss}
 \newcommand{\university}{Karlsruhe Institute of Technology}
 
 % Options
@@ -48,18 +48,18 @@
   \input{graph/graph}
   \input{geometry/geometry}
   \input{math/math}
-  \clearpage
   \input{string/string}
   \input{python/python}
   \input{other/other}
+  \vfill\null\columnbreak
   \input{template/template}
-  \clearpage
-  \ifodd\value{page}
-  \else
-    \null
-    \thispagestyle{empty}
-    \clearpage
-  \fi
-  \input{tests/test}
+%   \clearpage
+%   \ifodd\value{page}
+%   \else
+%     \null
+%     \thispagestyle{empty}
+%     \clearpage
+%   \fi
+  %\input{tests/test}
 \end{multicols*}
 \end{document}

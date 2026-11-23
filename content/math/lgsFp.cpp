@@ -1,5 +1,5 @@
 vector<int> pivots; // ith pivot is in ith row
-void gauss(int n, int m) {
+void gauss(int n, int m) { // b: last column
 	for (int r = 0, c = 0; c < m; c++) {
 		for (int i = r; i < n; i++) {
 			if (mat[i][c] != 0){

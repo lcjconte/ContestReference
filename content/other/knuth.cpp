@@ -11,5 +11,4 @@ ll calc(int n, int m, const vector<vector<ll>>& C) {
 				dp[i][j] = dp[i - 1][k] + C[k + 1][j];
 				opt[i][j] = k;
 	}}}
-	return dp[m - 1][n - 1];
-}
+	return dp[m - 1][n - 1];}
