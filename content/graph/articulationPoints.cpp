@@ -1,3 +1,4 @@
+struct Edge {int to, id;};
 vector<vector<Edge>> adj;
 vector<int> num;
 int counter, rootCount, root;

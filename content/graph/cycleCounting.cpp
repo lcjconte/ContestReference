@@ -9,8 +9,8 @@ struct cycles {
 	cycles(int n) : adj(n), seen(n), paths(n) {}
 
 	void addEdge(int u, int v) {
-		adj[u].push_back({v, ssize(edges)});
-		adj[v].push_back({u, ssize(edges)});
+		adj[u].push_back({v, sz(edges)});
+		adj[v].push_back({u, sz(edges)});
 		edges.push_back({u, v});
 	}
 
@@ -38,8 +38,8 @@ struct cycles {
 
 	bool isCycle(cycle cur) {// cycle must be constructed from base
 		if (cur.none()) return false;
-		UnionFind uf(ssize(adj)); // union find @\sourceref{datastructures/unionFind.cpp}@
-		for (int i = 0; i < ssize(edges); i++) {
+		UnionFind uf(sz(adj)); // union find @\sourceref{datastructures/unionFind.cpp}@
+		for (int i = 0; i < sz(edges); i++) {
 			if (cur[i]) {
 				cur[i] = false;
 				if (!uf.link(edges[i].first, edges[i].second)) break;
@@ -48,12 +48,12 @@ struct cycles {
 	}
 
 	int count() {
-		for (int i = 0; i < ssize(adj); i++) findBase(i);
-		assert(ssize(base) < 30);
+		for (int i = 0; i < sz(adj); i++) findBase(i);
+		assert(sz(base) < 30);
 		int res = 0;
-		for (int i = 1; i < (1 << ssize(base)); i++) {
+		for (int i = 1; i < (1 << sz(base)); i++) {
 			cycle cur;
-			for (int j = 0; j < ssize(base); j++)
+			for (int j = 0; j < sz(base); j++)
 				if (((i >> j) & 1) != 0) cur ^= base[j];
 			if (isCycle(cur)) res++;
 		}

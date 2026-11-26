@@ -136,14 +136,14 @@ Sei $a_{ij}$ die Adjazenzmatrix von $G$ \textcolor{gray}{(mit $a_{ii} = 1$)}, da
 
 \vfill\null\columnbreak
 
-\begin{algorithm}{Dynamic Connectivity}
-	\begin{methods}
-		\method{Constructor}{erzeugt Baum ($n$ Knoten, $m$ updates)}{n+m}
-		\method{addEdge}{fügt Kante ein,\code{id}=delete Zeitpunkt}{\log(n)}
-		\method{eraseEdge}{entfernt Kante \code{id}}{\log(n)}
-	\end{methods}
-	\sourcecode{graph/connect.cpp}
-\end{algorithm}
+% \begin{algorithm}{Dynamic Connectivity}
+% 	\begin{methods}
+% 		\method{Constructor}{erzeugt Baum ($n$ Knoten, $m$ updates)}{n+m}
+% 		\method{addEdge}{fügt Kante ein,\code{id}=delete Zeitpunkt}{\log(n)}
+% 		\method{eraseEdge}{entfernt Kante \code{id}}{\log(n)}
+% 	\end{methods}
+% 	\sourcecode{graph/connect.cpp}
+% \end{algorithm}
 
 \begin{algorithm}{Maximal Cliques}
 	\begin{methods}
@@ -162,6 +162,7 @@ Sei $a_{ij}$ die Adjazenzmatrix von $G$ \textcolor{gray}{(mit $a_{ii} = 1$)}, da
 		\item die ersten [0..l) Knoten in \code{adj} sind die linke Seite des Graphen
 	\end{itemize}
 	\sourcecode{graph/maxCarBiMatch.cpp}
+    \vfill\null\columnbreak
 	\begin{methods}
 		\method{hopcroft\_karp}{berechnet Matching}{\sqrt{\abs{V}}\*\abs{E}}
 	\end{methods}
